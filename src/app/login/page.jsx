@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { useAuth } from "../../../contexts/AuthContext";
+import Button from "@/components/ui/Button";
 
 export default function LoginPage() {
   const { login } = useAuth();
@@ -40,7 +41,9 @@ export default function LoginPage() {
         value={password}
         onChange={(e) => setPassword(e.target.value)}
       />
-      <button type="submit">Se connecter</button>
+      <Button type="submit" variant="black">
+        Se connecter
+      </Button>
     </form>
   );
 }
